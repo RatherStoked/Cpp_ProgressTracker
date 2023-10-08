@@ -1,0 +1,53 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main() 
+{
+    int budget = 0;
+    string tired_status = "";
+
+    cout << "Are you tired? Enter 'y' for yes or 'n' for no: ";
+    cin >> tired_status;
+    
+    cout << "What is your budget for tonight? $";
+    cin >> budget;
+
+    if (tired_status == "y") 
+    {
+        if (budget > 20) 
+        {
+            cout << "Order takeout." << endl;
+        } 
+        else if (budget <= 20) 
+        {
+            cout << "Have leftovers." << endl;
+        } 
+        else 
+        {
+            cout << "Something is wrong with your input." << endl;
+        }
+    } 
+    else if (tired_status == "n") 
+    {
+        if (budget > 40) 
+        {
+            cout << "Go to a restaurant." << endl;
+        } 
+        else if (budget < 40) 
+        {
+            cout << "Cook dinner at home." << endl;
+        } 
+        else 
+        {
+            cout << "Something is wrong with your input." << endl;
+        }
+    } 
+    else 
+    {
+        cout << "Invalid input for tired status." << endl;
+    }
+
+    return 0;
+}
